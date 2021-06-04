@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "Lattice Summaries"
+version = "0.2.0"
+description = "Framework to generate comparable summaries for different lattice files"
+authors = ["Felix Andreas <fandreas@physik.hu-berlin.de>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+doit = "^0.33.1"
+tomlkit = "^0.7.2"
+matplotlib = "^3.4.2"
+numpy = "^1.20.3"
+# apace = { path = "../../andreasfelix/apace", develop = true }
+# eleganttools = { path = "../eleganttools", develop = true }
+# LatticeJSON = { path = "../../latticejson/", develop = true 
+apace = { git = "https://github.com/andreasfelix/apace.git", branch = "main" }
+eleganttools = { git = "https://github.com/nobeam/eleganttools.git", branch = "main" }
+LatticeJSON = "^0.1.5"
+cpymad = "^1.6.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+black = { version = "^21.5b2", allow-prereleases = true }
+pylint = "^2.8.3"
+rope = "^0.19.0"
+isort = "^5.8.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
